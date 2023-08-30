@@ -1,0 +1,28 @@
+ <!-- <% for(let review of campground.reviews) { %>
+    <div class="card mb-3 ">
+        <div class="card-body">
+            <!-- <h5 class="card-title"> <%= review.author.username%></h5> -->
+            <p class="starability-result" data-rating="<%=review.rating%>">
+                Rated: <%= review.rating %> stars
+            </p>
+            <!-- <h6 class="card-subtitle mb-2 text-muted">By <%= review.author.username%></h6> -->
+            <p class="card-text">Review: <%= review.body %></p>
+         
+            <%  if( currentUser && review.author.equals(currentUser._id))  {%>
+            <form action="/campgrounds/<%=campground._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
+                <button class="btn btn-sm btn-danger">Delete</button>
+            </form>
+            <% } %>
+        </div>
+    </div>
+    <% } %>
+</div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button> -->
